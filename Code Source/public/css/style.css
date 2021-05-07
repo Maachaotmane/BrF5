@@ -1,0 +1,371 @@
+body
+    {
+        background: #fff;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+	
+.tm-white a {
+	color: #fff;
+}
+
+h1 { 
+    margin-top: 0;
+    margin-bottom: 25px; 
+}
+h1,
+h2,
+h3,
+h4
+    {
+        font-weight: bold;
+    }
+p { line-height: 1.6em; }
+img
+    {
+        max-width: 100%;
+        height: auto;
+    }
+.bt{
+    margin-top: 20px;
+    width: 15%;
+}
+.btt{
+    margin: 20px;
+    width: 25%;
+}
+.overlay 
+    {
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.4);
+       padding-top: 90px;
+       padding-bottom: 90px;
+    }  
+
+
+.navbar-default
+    {
+        background: #fff;
+        border: none;
+        box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+        margin: 0!important;
+    }
+.navbar-default .navbar-brand
+    {
+        color: #28a7e9;
+        font-size: 30px;
+        font-weight: bold;
+        height: 70px;
+        line-height: 35px;
+    }
+.navbar-default .nav li a
+    {
+        color: #666;
+        font-size: 13px;
+        font-weight: bold;
+        height: 70px;
+        line-height: 40px;
+    }
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus,
+.navbar-default .nav li a.current
+    {
+        color: #28a7e9;
+    }
+
+.navbar-default .navbar-toggle
+    {
+        border: none;
+        padding-top: 20px;
+    }
+.navbar-default .navbar-toggle .icon-bar
+    {
+        background: #28a7e9;
+        border-color: transparent;
+    }
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { background-color: transparent }
+      
+#home
+    {
+    background: url('../images/home-bg.jpg') no-repeat;
+    background-size: cover;
+    color: #fff;
+    margin-top: 70px;
+    text-align: center;
+    width: 100%;
+    }
+#home p
+    {
+        font-weight: 400;
+        font-style: italic;
+        line-height: 2em;
+    }
+#home img
+    {
+        display: inline-block;
+        margin-top: 30px;
+    }
+
+#divider
+    {
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+#divider .fa
+    {
+        color: #28a7e9;
+        font-size: 60px;
+    }
+#divider h3
+    {
+        font-size: 20px;
+    }
+
+#service
+    {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+#service p
+    {
+        padding-top: 10px;
+    }
+#service span
+    {
+        float: left;
+    }
+#service .fa
+    {
+        background: #28a7e9;
+        border-radius: 50%;
+        color: #fff;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+#service1
+    {
+        background: #f8f8f8;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+#service1 p
+    {
+        padding-top: 10px;
+    }
+#service1 span
+    {
+        float: left;
+    }
+#service1 .fa
+    {
+        background: #28a7e9;
+        border-radius: 50%;
+        color: #fff;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+#pricing
+    {
+        background: #f8f8f8;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+#pricing h2
+    {
+        padding-bottom: 60px;
+    }
+#pricing .pricing
+    {
+        background: #fff;
+    }
+#pricing .active
+    {
+        position: relative;
+        bottom: 20px;
+    }
+#pricing .pricing .pricing-title
+    {
+        background: #28a7e9;
+        color: #fff;
+        font-weight: bold;
+        padding: 30px;
+    }
+#pricing .pricing .pricing-title p
+    {
+        font-size: 20px;
+    }
+#pricing .pricing ul
+    {
+        padding: 0;
+        margin: 0;
+    }
+#pricing .pricing ul li
+    {
+        display: block;
+        list-style: none;
+        padding: 16px;
+    }
+#pricing .pricing .btn
+    {
+        background: transparent;
+        border: 1px solid #28a7e9;
+        border-radius: 0px;
+        color: #28a7e9;
+        font-weight: bold;
+        padding-right: 40px;
+        padding-left: 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+    }
+#pricing .pricing .btn:hover {
+    background: #28a7e9;
+    color: #fff;
+}
+
+#download
+    {
+        background: #f8f8f8;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+#download h2
+    {
+        padding-bottom: 20px;
+    }
+#download .btn
+    {
+        border-radius: 0px;
+        font-weight: bold;
+        margin-top: 20px;
+        padding: 10px 40px 10px 40px;
+    }
+
+#contact
+    {
+        background: url('../images/contact-bg.jpg') no-repeat;
+        background-size: cover;
+        color: #fff;
+    }
+#contact h2
+    {
+        padding-bottom: 10px;
+    }
+#contact address
+    {
+        padding-top: 20px;
+    }
+#contact address .fa
+    {
+        background: #28a7e9;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin-top: 6px;
+        margin-right: 10px;
+    }
+#contact .contact-form
+    {
+        padding-top: 40px;
+    }
+#contact .form-control
+    {
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        margin-bottom: 20px;
+    }
+#contact input
+    {
+        height: 50px;
+    }
+#contact input[type="submit"]
+    {
+        background: #28a7e9;
+        color: #fff;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+#contact input[type="submit"]:hover {
+    background: #107DB6;
+}
+
+footer
+    {
+        background: #fff;
+        font-weight: 400;
+        text-align: center;
+        padding: 20px;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+          width: 700px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          width: 900px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          width: 1000px;
+        }
+      }
+@media screen and ( max-width: 991px ) {
+    .templatemo-box {
+        margin-bottom: 30px;
+    }
+    #pricing .active {
+        bottom: 0;
+    }
+    .pricing {
+        margin-bottom: 20px;
+    }
+    #service img, #download img {
+        margin-top: 30px;
+    }
+    #service1 img {
+        margin-bottom: 30px;
+    }
+}
+@media screen and ( max-width: 767px ) {
+    .navbar-default .nav li a {
+        height: auto;
+        line-height: 2em;
+    }
+    #service, #pricing, #download {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    #contact .overlay {
+        padding-top: 40px;
+    }
+}
+@media screen and ( max-width: 360px ){
+    .pricing
+        {
+            padding-bottom: 40px;
+        }
+}
