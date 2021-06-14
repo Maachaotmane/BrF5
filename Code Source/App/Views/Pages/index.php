@@ -11,7 +11,7 @@
 						veniam ut dolore architecto id!<a rel="nofollow" href="http://www.facebook.com/templatemo"
 							target="_parent">templatemo</a>. Images by <a rel="nofollow" href="http://pixabay.com"
 							target="_blank">Pixabay</a></p>
-					<img src="<?php echo URLROOT ?>images/home.png" class="img-responsive" alt="home img">
+					<img src="<?php echo URLROOT; ?>images/home.png" class="img-responsive" alt="home img">
 					<button class="btn btn-primary btt" onclick="window.location.href='./reserve.php'">Booking</button>
 				</div>
 				<div class="col-md-1"></div>

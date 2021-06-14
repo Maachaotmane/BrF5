@@ -16,7 +16,28 @@ class Tarifs extends Controller
         ]);
     }
 
-    public function calcule($id)
+    public function edittarif($id)
+    {
+        $tarifs = $this->tarif->getTarifbyid($id);
+
+        $this->view('Pages/edittarif', [
+            'tarifs' => $tarifs,
+        ]);
+    }
+
+    public function update($id)
+    {
+        $prix = $_POST['prix'];
+        $this->tarif->update($id, $prix);
+
+        $tarifs = $this->tarif->getTarif();
+
+        $this->view('Pages/tarif', [
+            'tarifs' => $tarifs,
+        ]);
+    }
+
+    public function check($id)
     {
         $typebien = $_POST['typebien'.$id];
 
@@ -52,17 +73,9 @@ class Tarifs extends Controller
             $_POST['enfant'],
             $_POST['pension'],
             $_POST['prix_final'],
+            $_POST['unid'],
         );
-
-        echo json_encode($tarifs);
-    }
-
-    public function edittarif()
-    {
-        $edittarifs = $this->edittarif->getTarif();
-
-        $this->view('Pages/edittarif', [
-            'tarifs' => $edittarifs,
-        ]);
+        $success = 'success';
+        echo json_encode($success);
     }
 }

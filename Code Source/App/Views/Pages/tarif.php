@@ -71,9 +71,9 @@
                     <div class="card" >
                             <div class="card-body">
                                 <h5 class="card-title">Type :'.$tarif->type.' + Vue : '.$tarif->vue.'</h5>
-                                <p class="card-text">Prix : '.$tarif->prix.'</p>
-                                <a href="#" class="btn btn-primary">Edit</a>
-                                </div>
+                                <p class="card-text">Prix : '.$tarif->prix.'</p>'; ?>
+                                <a href="<?php echo URLROOT; ?>tarifs/edittarif/<?php echo $tarif->id; ?>" class="btn btn-primary">Edit</a>
+                                <?php echo'</div>
                                 </div>
                                 </div>';
 

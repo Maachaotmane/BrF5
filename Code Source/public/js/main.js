@@ -9,10 +9,11 @@ function addNew() {
     var insertAfterForm = document.getElementById('insertAfterForm'+i)
     i++;
     el.innerHTML = `
-    <form action="" method="post" style="border: 5px solid #1C6EA4;" id="insertAfterForm`+i+`">
+    <form action="" method="post" style="border: 5px solid #1C6EA4;border-top-style: none;margin-top: -16px;" id="insertAfterForm`+i+`">
     <div class="p-3 m-3">
         <div class="row">
             <div class="col-sm-3">
+            <label for="exampleInputEmail1">Type Bien :</label>
                 <select id="typebien`+ i + `" name="type` + i + `" class="browser-default custom-select mb-4" onchange="a(` + i + `)">
                     <option value="" disabled="" selected="">Type Bien</option>
                     <option value="Chambre">Chambre</option>
@@ -31,6 +32,7 @@ function addNew() {
                 </div>
         <div class="row text-center">
             <div class="col-sm-4">
+            <label for="exampleInputEmail1">Type Pension :</label>
                 <select id="pension`+ i + `" name="pension` + i + `" class="browser-default custom-select mb-4">
                     <option value="" disabled="" selected="">Type Pension</option>
                     <option value="Sans">Sans</option>
@@ -41,7 +43,7 @@ function addNew() {
         </div>
         <div id="buttonCalcule`+ i + `">
         <center>
-                    <a class="btn btn-lg  mb-2" style="background-color: #FB9334;" id="calcule`+ i + `" onclick="calcule(` + i + `)" >calcule</a>
+                    <a class="btn btn-lg  mb-2" style="background-color: #FB9334;" id="calcule`+ i + `" onclick="check(` + i + `)" >Check</a>
                     </center>
     </div>
     </div>
@@ -49,7 +51,6 @@ function addNew() {
     insertAfterForm.insertAdjacentElement('afterend', el);
 
 }
-
 function a(p1) {
     var a = document.getElementById('typebien' + p1).value;
 
@@ -58,8 +59,9 @@ function a(p1) {
     var tch2 = document.getElementById('typeLit' + p1)
     var vue = document.getElementById('vue' + p1)
     if (a == "Chambre") {
-        tch.innerHTML = `<select id="typechambre` + p1 + `" class="browser-default custom-select mb-3" name="typechambre` + p1 + `" onchange="a1(` + p1 + `)"> 
-        <option value="" disabled="" selected="">Type Chambre</option>
+        tch.innerHTML = `<label for="exampleInputEmail1">Type Chambre :</label>
+        <select id="typechambre` + p1 + `" class="browser-default custom-select mb-3" name="typechambre` + p1 + `" onchange="a1(` + p1 + `)"> 
+        <option value="" disabled="" selected="">Votre Choix:</option>
          <option value="1">Simple</option>
           <option value="0">Double</option>
         </select>
@@ -67,6 +69,7 @@ function a(p1) {
        `
         kids.innerHTML = ` <div class="row p-3  "">
        <div class="col-sm-5">
+       <label for="exampleInputEmail1">Last Than 2 Years :</label>
            <input type="number"  id="kid` + p1 + `"  placeholder="Kids(<2Ans)" class="browser-default custom-select" name="kid` + p1 + `"  onkeyup="a3(` + p1 + `) ">
             </div>
        <div class="col-sm-5" id="afterKid`+ p1 + `">
@@ -76,6 +79,7 @@ function a(p1) {
 
        <div class="row p-3" >
        <div class="col-sm-5">
+       <label for="exampleInputEmail1">Between 2 & 14  years :</label>
            <input type="number" id="between2nad14` + p1 + `"  placeholder="Enfants(2<Ans<14)" class="browser-default custom-select" name="enfant` + p1 + `" onkeyup="a4(` + p1 + `)">
        </div>
        
@@ -86,6 +90,7 @@ function a(p1) {
 
         <div class="row p-3">
        <div class="col-sm-5">
+       <label for="exampleInputEmail1">More Than 14 Years :</label>
            <input type="number" id="young` + p1 + `" placeholder="Enfants(Ans>14)" class="browser-default custom-select" name="young` + p1 + `" onkeyup="a5(` + p1 + `)">
        </div>
       
@@ -105,10 +110,10 @@ function a1(p1) {
     var tch2 = document.getElementById('typeLit' + p1)
     var vue = document.getElementById('vue' + p1)
     if (a1 == "0") {
-        tch2.innerHTML = '<select class="typelit" id="typelit' + p1 + '" name="typeLit' + p1 + '" class="browser-default custom-select mb-3" onclick="a2(' + p1 + ')"> <option value="" disabled="" selected="">Type Lit</option> <option value="0">2 lit simple</option> <option value="1">lit double</option> </select> '
+        tch2.innerHTML = '<label for="exampleInputEmail1">Type Lit:</label><select class="typelit browser-default custom-select mb-3" id="typelit' + p1 + '" name="typeLit' + p1 + '" class="browser-default custom-select mb-3" onclick="a2(' + p1 + ')"> <option value="" disabled="" selected="">Votre Choix</option> <option value="0">2 lit simple</option> <option value="1">lit double</option> </select> '
     } else {
         vue.innerHTML = ''
-        tch2.innerHTML = '<select class="typevue" id="typeVue' + p1 + '" class="browser-default custom-select mb-3" name="typeVue' + p1 + '"> <option value="" disabled="" selected="">Type Vue</option> <option value="int">Vue Int</option> <option value="ext">Vue EX</option> </select> ';
+        tch2.innerHTML = '<label for="exampleInputEmail1">Type Vue:</label><select class="typevue browser-default custom-select mb-3" id="typeVue' + p1 + '" class="browser-default custom-select mb-3" name="typeVue' + p1 + '"> <option value="" disabled="" selected="">Votre Choix</option> <option value="int">Vue Int</option> <option value="ext">Vue EX</option> </select> ';
     }
 
 
@@ -118,10 +123,10 @@ function a2(p1) {
     var vue = document.getElementById('vue' + p1)
 
     if (a2 == "0") {
-        vue.innerHTML = '<select id="typeVueDouble' + p1 + '" class="browser-default custom-select mb-2" name="typeVueDouble' + p1 + '"> <option value="" disabled="" selected="">Type Vue</option> <option value="int">Vue Int</option></select> ';
+        vue.innerHTML = '<label for="exampleInputEmail1">Type Vue:</label><select id="typeVueDouble' + p1 + '" class="browser-default custom-select mb-2" name="typeVueDouble' + p1 + '"> <option value="" disabled="" selected="">Votre Choix</option> <option value="int">Vue Int</option></select> ';
 
     } else {
-        vue.innerHTML = '<select id="typeVueDouble' + p1 + '" class="browser-default custom-select mb-2" name="typeVueDouble' + p1 + '"> <option value="" disabled="" selected="">Type Vue</option> <option value="int">Vue Int</option> <option value="ext">Vue EX</option> </select> ';
+        vue.innerHTML = '<label for="exampleInputEmail1">Type Vue:</label><select id="typeVueDouble' + p1 + '" class="browser-default custom-select mb-2" name="typeVueDouble' + p1 + '"> <option value="" disabled="" selected="">Votre Choix</option> <option value="int">Vue Int</option> <option value="ext">Vue EX</option> </select> ';
     }
 
 }
@@ -132,7 +137,7 @@ function a3(p1) {
     if (kidLit.length == 0) {
         var el = document.createElement("div");
         el.id = 'check' + p1;
-        el.innerHTML = '<select  id="kidLit' + p1 + '" class="browser-default custom-select mb-2" name="kidLit' + p1 + '"> <option value="" disabled="" selected="">Option</option> <option value="1">Plus lit (25%)</option><option value="0">Pas de Lit</option></select>'
+        el.innerHTML = '<label for="exampleInputEmail1">Option Lit :</label><select  id="kidLit' + p1 + '" class="browser-default custom-select mb-2" name="kidLit' + p1 + '"> <option value="" disabled="" selected="">Votre Choix</option> <option value="1">Plus lit (25%)</option><option value="0">Pas de Lit</option></select>'
         var insertAfter = document.getElementById('afterKid' + p1)
         insertAfter.insertAdjacentElement('afterbegin', el);
     }
@@ -150,7 +155,7 @@ function a4(p1) {
     if (enfantLit.length == 0) {
         var el = document.createElement("div");
         el.id = 'checkEnfant' + p1;
-        el.innerHTML = '<select  id="enfantLit' + p1 + '" class="browser-default custom-select mb-2" name="enfantLit' + p1 + '"> <option value="1" selected="">Plus lit (25%)</option></select>'
+        el.innerHTML = '<label for="exampleInputEmail1">Option Lit :</label><select  id="enfantLit' + p1 + '" class="browser-default custom-select mb-2" name="enfantLit' + p1 + '"> <option value="1" selected="">Plus lit (25%)</option></select>'
         var insertAfter = document.getElementById('afterEnfant' + p1)
         insertAfter.insertAdjacentElement('afterbegin', el);
     }
@@ -169,7 +174,7 @@ function a5(p1) {
     if (youngLit.length == 0) {
         var el = document.createElement("div");
         el.id = 'checkYoung' + p1;
-        el.innerHTML = '<select  id="youngLit' + p1 + '" class="browser-default custom-select mb-2" name="youngLit' + p1 + '"> <option value="" disabled="" selected="">Option</option> <option value="chmabreSimple">Ajout Chambre Simple</option><option value="plus70">(+70%) et Ajout un Lit </option></select>'
+        el.innerHTML = '<label for="exampleInputEmail1">Option Lit :</label><select  id="youngLit' + p1 + '" class="browser-default custom-select mb-2" name="youngLit' + p1 + '"> <option value="" disabled="" selected="">Votre Choix</option> <option value="chmabreSimple">Ajout Chambre Simple</option><option value="plus70">(+70%) et Ajout un Lit </option></select>'
         var insertAfter = document.getElementById('afterYoung' + p1)
         insertAfter.insertAdjacentElement('afterbegin', el);
 
@@ -182,10 +187,10 @@ function a5(p1) {
 
 
 
-function calcule(p1) {
-
-    var typebien = document.getElementById('typebien' + p1);
+function check(p1) {
+    
     var obj = {};
+    var typebien = document.getElementById('typebien' + p1);
 
     if (typebien.value == "Chambre") {
         var typechambre = document.getElementById('typechambre' + p1);
@@ -219,7 +224,7 @@ function calcule(p1) {
 
 
     $.ajax({
-        url: '/projet1/tarifs/calcule/' + p1,
+        url: '/projet1/tarifs/check/' + p1,
         type: "POST",
         data: obj,
         dataType: "json",
@@ -227,8 +232,9 @@ function calcule(p1) {
         success: function (data) {
             var prix = parseInt(data.prix);
             var nombreEnfant = 0;
-            var pension = document.getElementById('pension' + p1).value;
             var totalPrix = prix;
+            var pension = document.getElementById('pension' + p1).value;
+            
             if (pension == "Sans") {
                 totalPrix = totalPrix;
             } else if (pension == "Demi") {
@@ -278,6 +284,7 @@ function calcule(p1) {
             bienIdArray.push(data.id);
             bienPensionArray.push(pension);
             bienEnfantarray.push(nombreEnfant);
+
             console.log(prixReservationArray);
             console.log(bienIdArray);
             console.log(bienPensionArray);
@@ -298,16 +305,16 @@ function calcule(p1) {
             
             allReservation = allReservation + totalPrix;
             var buttonCalcule = document.getElementById('allReservationPrice');
-            buttonCalcule.innerHTML = '<h3 class="text-primary"> Prix total : '+allReservation+' DH</h3>'
+            buttonCalcule.innerHTML = '<h3 class="text-primary text-center"> Prix total : '+allReservation+' DH</h3>'
         }
     });
 
 }
 
 function book(){
+    var unid=Math.random();
     var startDate = document.getElementById('startTime').value;
     var endDate = document.getElementById('endTime').value;
-
     for(j=0; j<i;j++){
 
         // console.log(bienPensionArray[j]);
@@ -321,6 +328,7 @@ function book(){
                 enfant: bienEnfantarray[j],
                 startDate:  startDate,
                 endDate: endDate,
+                unid: unid,
             },
             dataType: "json",
             cache: false,
@@ -330,7 +338,7 @@ function book(){
                 successReserve.innerHTML = `
                 <center>
                 <div class="alert alert-primary p-5 m-5" role="alert">
-                This is a primary alert—check it out!
+                Succes Reservation
               </div>
               </center>`;
 

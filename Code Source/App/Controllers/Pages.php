@@ -25,8 +25,9 @@ class Pages extends Controller
     public function reserve()
     {
         $tarifs = $this->tarif->getTarif();
-        return $this->view('/Pages/reserve',[
-            'tarifs' => $tarifs
+
+        return $this->view('/Pages/reserve', [
+            'tarifs' => $tarifs,
         ]);
     }
 }
